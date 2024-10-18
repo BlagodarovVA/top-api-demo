@@ -8,12 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: Publish to registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           registry: docker.pkg.github.com
-          name: docker.pkg.github.com/BlagodarovVA/NestJS/tree/main/59/top-api-demo
+          name: docker.pkg.github.com/BlagodarovVA/top-api-demo/top-api-demo
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tags: 'develop'
